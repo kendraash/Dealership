@@ -1,4 +1,4 @@
-class Dealership
+class Vehicles
   @@all_vehicles = []
 
   define_method(:initialize) do |make, model, year|

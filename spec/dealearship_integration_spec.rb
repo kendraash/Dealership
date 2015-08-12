@@ -5,7 +5,7 @@ set(:show_exceptions, false)
 
 describe('the path of the list', {:type => :feature}) do
   it('processes the user entry for a vehicles make, model, and year') do
-    visit('/')
+    visit('/vehicles/new_form')
     fill_in('make', :with => 'Honda')
     fill_in('model', :with => 'Accord')
     fill_in('year', :with => 2010)

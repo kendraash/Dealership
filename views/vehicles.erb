@@ -1,0 +1,9 @@
+<h1>Dealership</h1>
+
+<p>Here are the vehicles:</p>
+
+<ul>
+  <% @vehicle.each() do |vehicle| %>
+  <li><%= vehicle.make() %> <%= vehicle.model() %> <%= vehicle.year() %></li>
+  <%end%>
+</ul>

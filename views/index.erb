@@ -1,26 +1,7 @@
-<h1>Dealership</h1>
+<h1>Welcome</h1>
 
-<p>Here are the vehicles:</p>
-
+<h2>For more options</h2>
 <ul>
-  <% @vehicle.each() do |vehicle| %>
-  <li><%= vehicle.all() %></li>
-  <%end%>
+<li><a href="/vehicles">See Vehicle List </a></li>
+<li><a href="/vehicles/new">Add New Vehicle</a></li>
 </ul>
-
-<p>Add a new vehicle:</p>
-
-<form action="/results" method="post">
-
-  <label for="make">Make</label>
-  <input type="text" name="make" id="make">
-
-  <label for="model">Model</label>
-  <input type="text" name="model" id="model">
-
-  <label for="year">Year</label>
-  <input type="text" name="year" id="year">
-
-  <button type="submit">Check vehicle</button>
-
-</form>
