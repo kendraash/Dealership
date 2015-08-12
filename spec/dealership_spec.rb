@@ -10,4 +10,11 @@ describe('Dealership') do
     end
   end
 
+  describe('#model') do
+    it("returns the model of the vehicle") do
+      test_vehicle=Dealership.new("Ford", "Focus", 2000)
+      expect(test_vehicle.model()).to(eq("Focus"))
+    end
+  end
+  
 end
