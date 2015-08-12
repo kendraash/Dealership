@@ -12,9 +12,15 @@ describe('Dealership') do
 
   describe('#model') do
     it("returns the model of the vehicle") do
-      test_vehicle=Dealership.new("Ford", "Focus", 2000)
+      test_vehicle = Dealership.new("Ford", "Focus", 2000)
       expect(test_vehicle.model()).to(eq("Focus"))
     end
   end
-  
+
+  describe('#age') do
+    it("returns the age of the vehicle") do
+      test_vehicle = Dealership.new("Ford", "Escape", 2004)
+      expect(test_vehicle.age()).to(eq(11))
+    end
+  end
 end
