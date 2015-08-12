@@ -63,4 +63,12 @@ describe(Dealership) do
       expect(test_vehicle.new_enough?()).to(eq(false))
     end
   end
+
+  describe('#id') do
+    it("returns a unique ID for the vehicle") do
+      test_vehicle = Dealership.new("Toyota", "Prius", 2000)
+      test_vehicle.save()
+      expect(test_vehicle.id()).to(eq(1))
+    end
+  end
 end

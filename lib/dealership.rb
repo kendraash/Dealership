@@ -5,6 +5,7 @@ class Dealership
       @make = make
       @model = model
       @year = year
+      @id = @@all_vehicles.length().+(1)
   end
 
   define_method(:make) do
@@ -38,5 +39,9 @@ class Dealership
 
   define_method(:new_enough?) do
     self.age()<10
+  end
+
+  define_method(:id) do
+    @id
   end
 end
