@@ -1,7 +1,11 @@
 require('rspec')
 require('dealership')
 
-describe('Dealership') do
+describe(Dealership) do
+
+  before() do
+    Dealership.clear()
+  end
 
   describe("#make") do
     it("restuns the make of the vehicle") do
@@ -37,4 +41,19 @@ describe('Dealership') do
     end
   end
 
+  describe('#save') do
+    it("saves the vehicle in the all_vehicles array") do
+      test_vehicle = Dealership.new("Chevy", "Blazer", 1991)
+      test_vehicle.save()
+      expect(Dealership.all()).to(eq([test_vehicle]))
+    end
+  end
+
+  describe('.clear') do
+    it("clears the class array of all vehicles") do
+      Dealership.new("Honda", "CRV", 2007)
+      Dealership.clear()
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
 end
