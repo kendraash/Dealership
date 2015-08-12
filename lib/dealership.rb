@@ -1,4 +1,6 @@
 class Dealership
+  @@all_vehicles = []
+
   define_method(:initialize) do |make, model, year|
       @make = make
       @model = model
@@ -20,5 +22,9 @@ class Dealership
   define_method(:age) do
     current_year = Time.new().year()
     age = current_year.-(@year)
+  end
+
+  define_singleton_method(:all) do
+    @@all_vehicles
   end
 end

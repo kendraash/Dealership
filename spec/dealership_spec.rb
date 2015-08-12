@@ -31,5 +31,10 @@ describe('Dealership') do
     end
   end
 
+  describe('.all') do
+    it("creates an empty array to store vehicles") do
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
 
 end
