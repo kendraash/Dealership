@@ -71,4 +71,14 @@ describe(Dealership) do
       expect(test_vehicle.id()).to(eq(1))
     end
   end
+
+  describe('.find') do
+    it("returns a vehicle by its id number") do
+      test_vehicle = Dealership.new('Toyota', 'Prius', 2000)
+      test_vehicle.save()
+      test_vehicle2 = Dealership.new('Toyota', 'Corolla', 1999)
+      test_vehicle2.save()
+      expect(Dealership.find(test_vehicle.id())).to(eq(test_vehicle))
+    end
+  end
 end
