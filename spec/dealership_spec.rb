@@ -56,4 +56,11 @@ describe(Dealership) do
       expect(Dealership.all()).to(eq([]))
     end
   end
+
+  describe('#new_enough?') do
+    it("return false if the car is older than 10 years from today") do
+      test_vehicle = Dealership.new("Ford", "Focus", 1990)
+      expect(test_vehicle.new_enough?()).to(eq(false))
+    end
+  end
 end

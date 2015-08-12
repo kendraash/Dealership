@@ -36,4 +36,7 @@ class Dealership
     @@all_vehicles = []
   end
 
+  define_method(:new_enough?) do
+    self.age()<10
+  end
 end
